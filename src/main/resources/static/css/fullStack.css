@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    align-content: center;
+}
+
+#terminal {
+    max-height: 100px;
+    max-width: 500px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+html {
+    background: url(../img/background1-2_cropped2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    /*background-size: cover;*/
+}
+
+body {
+    /*background: url(../img/background1.jpg);*/
+
+    /*overflow-y: hidden !important;*/
+    /*overflow-x: hidden !important;*/
+    /*background-color: #f8f8f8;*/
+    /*!*background-size: cover;*!*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: right;*/
+}
+
+/*body { background: black }*/
+
+.container {
+    height: 100px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/*positioning and text styles*/
+#demo {
+    background: black;
+    position: absolute;
+    display: inline-block;
+    font-family: Monaco, Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    font-size: 12px;
+    color: #ab9982;
+    text-shadow: 0.5pt 0.5px 4px #585245;
+    min-width: 360px;
+    left: 600px;
+    top: 370px;
+}
+
+/*other*/
+#demo {
+    contain: content;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.twrc {
+    margin-left: -12px;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    /*display: inline-block;*/
+    background-color: #606060;
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 24px;
+    /*
+    Animation paramaters:
+    blink = animation-name,
+    1s = animation-duration,
+    step-end = animation-timing-function,
+    infinite = animation-iteration-count
+    */
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
